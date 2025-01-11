@@ -58,6 +58,7 @@
             <!-- handel error with regex and use realtime validation -->
             <div class=" text-end fs-sm alert m-0 p-0" *ngIf="signupForm.get('password')?.errors && ( signupForm.get('password')?.touched || inputPass.value.length>0) ">
               <p class="fs-sm text-muted m-0 p" *ngIf="signupForm.get('password')?.getError('required')"><span class="text-danger">Password cannot be empty</span> </p>
+              <p class="fs-sm text-muted m-0 p" *ngIf="signupForm.get('password')?.getError('pattern')"><span class="text-danger">Should start with one Cap letter at least  </span> </p>
             </div>
 
 
